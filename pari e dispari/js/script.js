@@ -9,6 +9,10 @@
 // avrà vinto altrimenti se sceglierà dispari ed il risultato della somma
 // è dispari allora avrà vinto altrimenti avrà perso
 
+const pari = 'Pari';
+const dispari = 'Dispari';
+
+
 let puntataUser = prompt('Pari o dispari');
 console.log(puntataUser);
 
@@ -23,10 +27,12 @@ console.log (sum);
 
 let risultatoFinale;
 
-if (sum % 2 === 0) {
-    risultatoFinale = sum + ' è pari'
-} else {
-    risultatoFinale = sum + ' è dispari'
+if (sum % 2 === 0 && puntataUser === pari) {
+    risultatoFinale = sum + ' hai vinto'
+} else if (sum % 2 != 0 && puntataUser === dispari) {
+    risultatoFinale = sum + ' hai vinto'
+}else {
+    risultatoFinale = sum + ' hai perso'
 }
 
 console.log (risultatoFinale);
