@@ -12,7 +12,6 @@
 const pari = 'Pari';
 const dispari = 'Dispari';
 
-
 let puntataUser = prompt('Pari o dispari');
 console.log(puntataUser);
 
