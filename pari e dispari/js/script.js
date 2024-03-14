@@ -5,14 +5,28 @@
 // Dichiariamo chi ha vinto.
 
 // Definisco delle variabili con le seguenti scelte
-// dopodichè devo dire che l'utente vince solo se la somma
-// dei due numeri rispecchia a livello matematico ciò che ha scelto
-// quindi o pari o dispari
-// nel caso del pari possiamo ragionare come se il risultato finale diviso per 2 dà come resto 0
-// altrimenti è dispari
+// Se l'utente sceglie pari, ed il risultato della somma è pari
+// avrà vinto altrimenti se sceglierà dispari ed il risultato della somma
+// è dispari allora avrà vinto altrimenti avrà perso
+
+let puntataUser = prompt('Pari o dispari');
+console.log(puntataUser);
 
 let userNum = parseInt(prompt('Inserisci il tuo numero'));
 console.log(userNum);
 
-let userPc = Math.floor((Math.random() * 4) + 1);;
+let userPc = Math.floor((Math.random() * 4) + 1);
 console.log(userPc);
+
+let sum = userNum + userPc;
+console.log (sum);
+
+let risultatoFinale;
+
+if (sum % 2 === 0) {
+    risultatoFinale = sum + ' è pari'
+} else {
+    risultatoFinale = sum + ' è dispari'
+}
+
+console.log (risultatoFinale);
